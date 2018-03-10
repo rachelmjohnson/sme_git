@@ -72,6 +72,18 @@ view: users {
     drill_fields: [detail*]
   }
 
+  measure: sum {
+    type: sum
+    sql: ${age} ;;
+  }
+
+  measure: count_distinct {
+    type: count_distinct
+    sql: ${zip} ;;
+  }
+
+  ##making another change##
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
